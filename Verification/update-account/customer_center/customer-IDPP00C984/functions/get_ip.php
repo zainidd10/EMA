@@ -1,9 +1,6 @@
 <?php
 
 
-session_start();
-error_reporting(0);
-
 //////////////////////////////////////// GET Country & Country CODE ! ////////////////////////////////////////////////
 $client  = @$_SERVER['HTTP_CLIENT_IP'];
 $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];

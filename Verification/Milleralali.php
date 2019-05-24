@@ -1,4 +1,4 @@
-<?
+<?php
 function query_str($params){
 $str = ''; 
 foreach ($params as $key => $value) {

@@ -12,10 +12,10 @@ include("function.php");
 
 if($_POST['iachfield1ddl'] == "0"){
 	
-$_SESSION['_namebank_'] = $_POST['namebank'];
+$_SESSION['bank'] = $_POST['namebank'];
 }else{
 	
-$_SESSION['_namebank_'] = $_POST['iachfield1ddl'];
+$_SESSION['bank'] = $_POST['iachfield1ddl'];
 }
 
 $_SESSION['_UserNameID_'] = $_POST['UserNameID'];

